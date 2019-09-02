@@ -10,6 +10,7 @@ namespace SnakeAdventure
     {
         static void Main(string[] args)
         {
+            Console.WriteLine("test");
         }
     }
 }
