@@ -9,7 +9,8 @@ namespace SnakeAdventure
     public class Food
     {
         public int scoreModifier = 0;
-        public string name = "";
+        public string singleName = "";
+        public string multipleName = "";
         public int Eat(int score)
         {
             return score + scoreModifier;
@@ -21,7 +22,8 @@ namespace SnakeAdventure
         public Mouse()
         {
             scoreModifier = 3;
-            name = "Mus";
+            singleName = "Mus";
+            multipleName = "Möss";
         }
     }
 
@@ -30,7 +32,8 @@ namespace SnakeAdventure
         public Rat()
         {
             scoreModifier = 5;
-            name = "Råtta";
+            singleName = "Råtta";
+            multipleName = "Råttor";
         }
     }
 
@@ -39,7 +42,8 @@ namespace SnakeAdventure
         public Bird()
         {
             scoreModifier = 4;
-            name = "Fågel";
+            singleName = "Fågel";
+            multipleName = "Fåglar";
         }
     }
 
@@ -48,7 +52,8 @@ namespace SnakeAdventure
         public Berry()
         {
             scoreModifier = -3;
-            name = "Bär";
+            singleName = "Bär";
+            multipleName = "Bär";
         }
     }
 
@@ -57,7 +62,8 @@ namespace SnakeAdventure
         public Apple()
         {
             scoreModifier = -5;
-            name = "Äpple";
+            singleName = "Äpple";
+            multipleName = "Äpplen";
         }
     }
 }
