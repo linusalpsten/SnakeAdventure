@@ -27,7 +27,7 @@ namespace SnakeAdventure
             Console.WriteLine("Du behöver 20 poäng för att gå vidare till nästa nivå");
             while (!gameover)
             {
-                Console.Clear();
+                
                 Console.WriteLine($"Poäng: {score}");
                 Console.WriteLine($"Du befinner dig i {location}");
                 Console.WriteLine("Vill du...");
@@ -54,6 +54,7 @@ namespace SnakeAdventure
                     score = 0;
                     NextLocation();
                 }
+                Console.Clear();
             }
         }
 
@@ -122,12 +123,15 @@ namespace SnakeAdventure
             {
                 case Locations.Skogen:
                     location = Locations.Träsket;
+                    TellNextLocation();
                     break;
                 case Locations.Träsket:
                     location = Locations.Kloaken;
+                    TellNextLocation();
                     break;
                 case Locations.Kloaken:
                     location = Locations.Storstaden;
+                    TellNextLocation();
                     break;
                 case Locations.Storstaden:
                     gameover = true;
@@ -137,6 +141,13 @@ namespace SnakeAdventure
                 default:
                     break;
             }
+        }
+
+        public static void TellNextLocation()
+        {
+            Console.WriteLine($"Grattis du har kommit till {location}");
+            Console.WriteLine("Tryck på en valfri tangent för att spela vidare.");
+            Console.ReadKey();
         }
 
         public static void FindFood()
